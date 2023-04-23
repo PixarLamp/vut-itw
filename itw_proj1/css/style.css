@@ -1,0 +1,505 @@
+/*
+ * Login: xhrklo00
+ *
+ * Doplnte sve reseni.
+ *
+ * Nezapomente pridat strucne hromadne komentare pro pravidla jednotlivych sekci
+ * a pro netrivialni useky kodu (napr. bubliny v sekci #refs)
+ */
+
+/* common properties */
+body{
+    margin: auto;
+}
+.content{
+    font-family: PT Sans;
+    max-width:1200px;
+    min-width: 768px;
+    margin: auto;
+}
+h3{
+    font-size: 24px;
+}
+.content p{
+    text-align: center;
+    color: #898989;
+    font-size: 18px;
+    line-height: 1.7;
+}
+#services, #about, #team, #stats, #price, #refs, #contact{
+    padding: 60px 20px 80px 20px;
+    min-width: 768px; 
+}
+/* header beginning */
+#header{
+    background-image: url(../img/header.jpg);
+    height: 100vh;
+    min-height: 400px;
+    min-width: 768px;
+    background-position: center;
+    background-size: cover;
+    padding: 0px 20px 0px 20px;
+}
+#header-title h1{
+    color: white;
+    font-size: 64px;
+    white-space: nowrap;
+    padding-bottom: 20px;
+}
+/* setting button & title in the bottom 1/3 of the header */
+#header-title{
+    position: absolute;
+    bottom: 33%;
+}
+#logo a{
+    font-family: Special Elite;
+    font-size: 25px;
+}
+#header-menu{
+    padding-top: 10px;
+    position: relative;
+}
+#contacts{
+    position: absolute;
+    top: 10px;
+    right:0px;
+}
+#networks, #navigation{
+    position: absolute;
+    top: 40px;
+}
+#networks{
+    right: 0px;
+}
+#header-menu a{
+    color: steelblue;
+    text-decoration: none;
+}
+#get-started a{
+    text-decoration: none;
+    color: #898989;
+    font-size: 18px;
+    padding: 20px;
+    border: 2px solid;
+    border-color: #898989;
+    border-radius: 15px;
+    transition: .5s;
+}
+#get-started a:hover{
+    background-color: steelblue;
+    color: white;
+    border: none;
+}
+i{
+    color: steelblue;
+    padding-right: 5px;
+}
+#networks i{
+    padding-right: 0px;
+    padding-left: 5px;
+    padding-top: 20px;
+}
+#contacts i{
+    padding-left: 10px;
+}
+#networks i, #logo i{
+    font-size: 25px;
+}
+#networks i:hover{
+    color: white;
+}
+#phone, #mail a{
+    color: #898989;
+}
+/* setting up the menu bar */
+#navigation{
+    white-space: nowrap;
+    margin-top: 20px;
+}
+#navigation a{
+    color: #898989;
+    text-transform: UPPERCASE;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    padding: 5px 15px 5px 15px;
+}
+#navigation ul {
+    margin: 0;
+    padding: 0;
+}
+#navigation li {
+    display: inline;
+}
+#navigation a:hover{
+    border: 1px solid white;
+}
+#header-menu a:hover{
+    color:white;
+}
+
+/* header end */
+/* services beginning */
+#services h2, #team h2, #contact h2{
+    text-align: center;
+    text-transform: UPPERCASE;
+    font-size: 40px;
+}
+.services-card img{
+    border: 1px solid;
+    border-color: steelblue;
+    height: 50px;
+    padding: 5px;
+    border-radius: 5px;
+}
+/* hiding the second icon (used when card is hovered over) */
+.services-card img:last-child{
+    display: none;
+}
+.services-card{
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+.services-card p{
+    font-size: 14px;
+    color: #bfbfbf;
+    margin: 0;
+}
+.services-card h3{
+    margin-bottom: 0;
+}
+.services-card:hover{
+    color: steelblue;
+    box-shadow: 0px 0px 10px steelblue;
+}
+/* changing the icons when hover */
+.services-card:hover img:first-child{
+    display: none;
+}
+.services-card:hover img:last-child{
+    display: inline;
+    background-color: steelblue;
+}
+/* positioning the cards to the columns */
+#services .content>div{
+    display: flex;
+    flex-wrap: wrap;
+    width: 768px;
+    justify-content: center;
+}
+#services .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* services end */
+/* about beginning*/
+#about{
+    background-color: #f7f7f7;
+}
+.about-item p{
+    text-align: justify;
+}
+#about h2{
+    text-align: left;
+    padding-top: 40px;
+    font-size: 32px;
+}
+#about img{
+    width: 40%;
+    border-radius: 5px;
+    transition: .5s;
+}
+/* setting the first(every odd) image to the left */
+.about-item:nth-of-type(odd) img{
+    float: left;
+    margin: 40px 80px 40px 0px;
+}
+/* setting every even image to the right */
+.about-item:nth-of-type(even) img{
+    float: right;
+    margin: 40px 0px 40px 80px;
+}
+#about img:hover{
+    width: 50%;
+}
+/* about end */
+/* team beginning */
+.team-card{
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    text-align: center;
+    width: 21%;
+    margin: 0px 10px 0 10px;
+    display: inline-block;
+}
+#team .content{
+    text-align: center;
+}
+.team-card:hover{
+    box-shadow: 0px 0px 10px steelblue;
+    color: steelblue;
+}
+/* setting the image to fit inside the card */
+.team-card img{
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.team-card h4{
+    color: #898989;
+    margin: 0px;
+    padding: 0px;
+}
+.team-card p{
+    font-size: 14px;
+    color: #bfbfbf;
+}
+/* team end */
+/* stats beginning */
+.stats-card{
+    border-radius: 5px;
+    transition: 0.s;
+    text-align: center;
+    width: 300px;
+    margin: 0px 10px 0px 10px;
+    background-color: #4d4d4d;
+    display: block;
+    position:relative;
+}
+.stats-card:hover{
+    background-color: steelblue;
+}
+.stats-card:hover p{
+    color:white;
+}
+/* positioning cards */
+#stats .content{
+    display: flex;
+    justify-content: space-around;
+}
+.stats-card h3{
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+.stats-card p{
+    font-size: 14px;
+}
+/* setting the icon and its cutout */
+.stats-card i{
+    font-size: 32px;
+    background-color: white;
+    margin: 0;
+    padding: 10px;
+    border-radius: 50%;
+    position:absolute;
+    margin-left:-25px;
+    top: -27px;
+}
+/* stats end */
+/* price beginning */
+#price{
+    background-color: #f7f7f7;
+}
+#price .content h2{
+    text-align: center;
+    font-size: 32px;
+}
+#price table{
+    width: 80%;
+    border-spacing: 0px 20px;
+    margin-left: auto;
+    margin-right: auto;
+}  
+td {
+    border-top: 1px dotted steelblue;
+    border-bottom: 1px dotted steelblue;
+    color: #898989;
+}
+th, td{
+    padding: 20px;
+    text-align: left;
+}
+ul{
+    padding-left: 15px;
+}
+#price button{
+    background-color: #f7f7f7;
+    border: 1px solid steelblue;
+    border-radius: 5px;
+    padding: 20px;
+}
+/* setting the list title */
+#price li:first-child{
+    list-style-type: none;
+    font-weight: bold;
+    margin-left: -15px;
+}
+/* setting the hover properties */
+#price button:hover{
+    background-color: steelblue;
+    color: white;
+}
+tbody tr:hover{
+    background-color: white;
+}
+tr:hover td{
+    color: steelblue;
+}
+/* price end */
+/* refs beginning */
+#refs img{
+    width: 60px;
+    border-radius: 50%;
+}
+.refs-card{
+    width: 400px;
+    position:relative;
+    margin: 0px 40px 0px 40px;
+}
+#refs .content{
+    display: flex;
+    justify-content: space-evenly;
+}
+figure h3{
+    color: #898989;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+#refs figure{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+/* setting the box to create bubble */
+blockquote{
+    background-color: #4d4d4d;
+    color: white;
+    font-size: 18px;
+    padding: 30px;
+    padding-left: 45px;
+    border-radius: 5px;
+    margin: 0px;
+}
+/* setting the quotation mark */
+blockquote span::before {
+    color: steelblue;
+    font-size: 65px;
+    content: '\201d';
+    font-family: 'Verdana', sans-serif;
+    position: absolute;
+    top: 23px;
+    left: 5px;
+}
+/* creating an arrow pointing to the picture */
+blockquote:before {
+    content: "";
+    border-left: 25px solid #4d4d4d;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #4d4d4d;
+    border-bottom: 25px solid transparent;
+    position: absolute;
+    left: 40px;
+    bottom: 85px;
+}
+/* positioning the creating arrow upper to fit the smaller bubble */
+.refs-card:first-of-type blockquote:before{
+    position: absolute;
+    left: 40px;
+    bottom: 110px;
+}
+/* setting the hover properties for the whole card */
+.refs-card:hover figure h3{
+    color: steelblue;
+}
+.refs-card:hover blockquote{
+    background-color: steelblue;
+}
+.refs-card:hover blockquote:before{
+    border-left: 25px solid steelblue;
+    border-top: 10px solid steelblue;
+}
+.refs-card:hover blockquote span:before{
+    color: white;
+}
+#refs, #team{
+    border-bottom: 1px dashed #4d4d4d;
+}
+/* refs end */
+/* contact beginning */
+#map{
+    height: 400px;
+    width: 50%;
+    float: left;
+}
+/* form setup */
+#contact input, textarea{
+    border: 2px solid steelblue;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px 0px 0px 20px;
+    outline: none;
+}
+#contact input:focus, textarea:focus{
+    border: 2px solid green;
+}
+#contact input:focus:invalid, textarea:focus:invalid{
+    color: red;
+}
+#contact input:required:valid, textarea:required:valid{
+    color: steelblue;
+}
+#contact-submit{
+    background-color: steelblue;
+    color:white;
+}
+#contact-submit:hover{
+    background-color: green;
+}
+/* form positioning */
+form{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+#contact-name{
+    grid-row: 1;
+    grid-column: 1/ span 2;
+}
+#contact-email{
+    grid-row: 1;
+    grid-column: 3/ span 2;
+}
+#contact-subject{
+    grid-row: 2;
+    grid-column: 1/ span 4;
+}
+#contact-message{
+    grid-row: 3;
+    grid-column: 1/ span 4;
+}
+#contact-submit{
+    grid-row: 4;
+    grid-column: 2/ span 2;
+}
+/* contact end */
+/* footer beginning */
+#footer{
+    background-color: black;
+    color: white;
+    padding: 40px 20px 40px 20px;
+    min-width: 768px;
+}
+#footer .content{
+    display: flex;
+    justify-content: space-between;
+}
+#footer a{
+    color: steelblue;
+    text-decoration: none;
+}
+/* footer end */

@@ -1,0 +1,351 @@
+body {
+    /* font-size: 14px; */
+    font-size: 1rem;
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+}
+img, table{
+    max-width: 100%;
+}
+.footer_bg{
+    background-image: url(./itw_cv3/footer_bg.gif);
+}
+#footer, #bottom_footer{
+    padding: 1em 20px;
+    padding-bottom: 3px;
+    /* width: 960px; */
+    margin: auto;
+}
+#footer h1{
+    color: #b15e23;
+    font-style: italic;
+    font-size: 20px;
+    padding-bottom: 3%;
+}
+#footer #ITW{
+    font-size: 4rem;
+}
+#footer a {
+    color: white;
+    text-decoration: none;
+}
+#navbar_bg{
+    background-color: #b15e23;
+}
+#navbar a {
+    color: white;
+    text-decoration: none;
+}
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#navbar li {
+    display: inline-block;
+    padding: 1rem;
+    /* position: relative; */
+}
+#navbar{
+    margin: auto;
+}
+#navbar li a {
+    position: relative;
+  }
+#navbar li:hover{
+    background-color: #3c1f0a;
+}
+
+.predmet_bg {
+    background-image: linear-gradient(to top, lightgray, white);
+}
+#predmet{
+    margin: auto;
+}
+h2{
+    color: #d5a17c;
+    margin: 0 0 4px 0;
+}
+#prednasky h3{
+    margin: 0;
+}
+h3 a{
+    color: #3c1f0a;
+    text-decoration: none;
+}
+p{
+    color: #656565;
+}
+hr{
+    color: #d5a17c;
+    border: none;
+    border-top: dotted;
+}
+#predmet, #prednasky, #vysledky, #cvicenia{
+    padding: 1em 20px;
+}
+th{
+    color: #656565;
+    background-color: #d5a17c;
+}
+td{
+    text-align: center;
+}
+table{
+    width: 100%;
+}
+#img{
+    margin: 0 2% 0 0;
+}
+dt {
+    float: left;
+    clear: left;
+}
+dt::after {
+    content: ":";
+}
+#kontakty{
+    width: 310px;
+}
+dd {
+    text-align: right;
+}
+#bottom_footer h2{
+    color: white;
+}
+#bottom_footer #kontakty{
+    color: white;
+}
+#bottom_footer a{
+    color: #b15e23;
+    text-decoration: none;
+}
+#bottom_footer ul {
+    list-style-image: url(./itw_cv3/footer_list_bullet.gif);
+    margin-left: 20px;
+    padding: 0;
+}
+.content{
+    margin: auto;
+}  
+.content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.row{
+    display: inline-flex;
+}
+#bottom_footer .row{
+    display: block;
+}
+.row img{
+    max-height: 60px;
+}
+.text{
+    padding: 0 10px 0 10px;
+}
+
+/* screen < 576px */
+@media screen and (max-width: 575px){
+    #footer, #bottom_footer, #predmet{
+        max-width: 575px;
+        padding: 1em 20px;
+    }
+    #navbar{
+        max-width: 575px;
+    }
+    #navbar li{
+        display: none;
+    }
+    #navbar li:first-child{
+        display:block
+    }
+    .fas.fa-bars {
+        display: block;
+        float: right;
+        font-size: 1rem;
+        color: white;
+    }
+    #navbar li:first-child:hover{
+        background-color: #b15e23;
+    }
+    .col.right{
+        background-image: linear-gradient(to bottom, lightgray, white);
+    }
+}
+/* screen > 576px */
+@media screen and (min-width: 576px) {
+    #footer, #bottom_footer, #predmet{
+        max-width: 767px;
+        padding: 1em 20px;
+    }
+    #navbar{
+        max-width: 767px;
+    }
+    .fas.fa-bars{
+        display: none;
+    }
+    .col.right{
+        background-image: linear-gradient(to bottom, lightgray, white);
+    }
+}
+/* screen > 768px */
+@media screen and (min-width: 768px){
+    #footer, #bottom_footer, #predmet{
+        max-width: 991px;
+        padding: 1em 20px;
+    }
+    #navbar{
+        max-width: 991px;
+    }
+    .col{
+        float: left;
+    }
+    .left{
+        width: 58%;
+    }
+    .right{
+        width:42%;
+    }
+    .smaller_left{
+        width:100%;
+    }
+    .smaller_right{
+        width:100%;
+    }
+    .col.right{
+        background-image: linear-gradient(to right, lightgray, white);
+        padding-bottom: 70px;
+    }
+    #bottom_footer{
+        display: flex;
+        flex-direction: row;
+    }
+    #suvisiace{
+        padding-left: 20px;
+    }
+}
+/* screen > 992px */
+@media screen and (min-width: 992px){
+    #footer, #bottom_footer, #predmet{
+        max-width: 1199px;
+        padding: 1em 20px;
+    }
+    #navbar{
+        max-width: 1199px;
+    }
+    #predmet p{
+        max-width: 96%;
+    }
+    .content{
+        display: flex;
+        flex-direction: row;
+    }
+    .left {
+        width: 66%;
+    } 
+    .right {
+        width: 33%;
+    }
+    .smaller_left{
+        width:50%;
+    }
+    .smaller_right{
+        width:50%;
+    }
+    .col.right{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .col.left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+    }
+    #vysledky{
+        align-self:stretch;
+    }
+    #bottom_footer .left, #bottom_footer .right{
+        width:33%;
+    }
+    #bottom_footer .right{
+        padding-left: 30px;
+    }
+}
+/* screen > 1200px */
+@media screen and (min-width: 1200px){
+    #footer, #bottom_footer, #predmet{
+        width: 1200px;
+        padding: 1em 20px;
+    }
+    #navbar{
+        width: 1200px;
+    }
+    .content{
+        width: 1200px;
+        display: flex;
+        flex-direction: row;
+    }
+    .smaller_left{
+        width:50%;
+    }
+    .smaller_right{
+        width:50%;
+    }
+    .left {
+        width: 66%;
+    } 
+    .right {
+        width: 33%;
+    }
+    .col.right{
+        display: flex;
+        flex-direction: column;
+    }
+    .col.left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+    }
+    #vysledky{
+        align-self:stretch;
+    }
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;  
+    position: absolute;
+    z-index: 1;
+}
+  
+.tooltip .tooltiptext {
+    width: 120px;
+    top: 175%;
+    left: 50%;
+    margin-left: -60px;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.hidden {
+    display: none;
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
